@@ -11,97 +11,130 @@
     <link rel="icon" href="https://ccee.nkust.edu.tw/var/file/54/1054/msys_1054_6264000_48418.png" type="image/x-icon">
     <link rel="stylesheet" href="./謝瑞鴻 教授_files/combine-zh-tw.css" type="text/css">
 
-    <!-- 以下是新增的 CSS 樣式 -->
-    <style>
-        /* 美化麵包屑導航 */
-        .breadcrumb {
-            padding: 10px 0;
-            background-color: transparent;
-            border-radius: 0;
-            margin-bottom: 25px;
-            list-style: none;
-            line-height: 1.5;
-        }
-
-        .breadcrumb > li {
-            display: inline-block;
-            margin-right: 6px;
-        }
-
-        .breadcrumb > li + li:before {
-            content: "›";
-            padding: 0 8px;
-            color: #adb5bd;
-            font-size: 1.3em;
-            vertical-align: middle;
-        }
-
-        .breadcrumb > li > a {
-            display: inline-block;
-            padding: 8px 16px;
-            background-color: #f0f2f5;
-            color: #337ab7;
-            text-decoration: none;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: 500;
-            transition: all 0.25s ease-in-out;
-            border: 1px solid #d8dde3;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-
-        .breadcrumb > li > a:hover {
-            background-color: #007bff;
-            color: #ffffff;
-            border-color: #0069d9;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 10px rgba(0, 123, 255, 0.2);
-        }
-
-        .breadcrumb > .active > a,
-        .breadcrumb > .active > a:hover,
-        .breadcrumb > .active > a:focus {
-            background-color: #007bff;
-            color: #ffffff;
-            border-color: #0069d9;
-            font-weight: bold;
-            cursor: default;
-            transform: none;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        /* 針對教授資訊表格的一些基本調整 */
-        .module-um .meditor {
-            line-height: 1.8; /* 增加行高，使閱讀更舒適 */
-        }
-        .module-um .meditor table { /* 移除表格內聯樣式的部分影響，讓CSS更好控制 */
-            color: inherit;
-            font-family: inherit;
-            font-size: inherit;
-            background-color: transparent !important; /* 强制覆盖内联的背景色 */
-        }
-        .module-um .meditor ul li div {
-            padding: 8px 12px; /* 調整列表項內div的padding */
-            margin-bottom: 8px; /* 列表項間距 */
-            background-color: #f9f9f9; /* 稍微調整背景色 */
-            border: 1px solid #e9ecef;
-            border-radius: 4px;
-        }
-        .module-um .meditor hr {
-            margin-top: 20px;
-            margin-bottom: 20px;
-            border-top: 1px solid #004b97;
-        }
-        .module-um .meditor h3, .module-um .meditor p > big, .module-um .meditor ul big { /* 讓標題和強調文字更突出 */
-            color: #333;
-        }
-        /* 修正一些表格 td 的内联样式问题，提高可读性 */
-        .plan_table_small td {
-            background-color: transparent !important; /* 尝试覆盖内联背景 */
-        }
-
-    </style>
-    <!-- 新增的 CSS 樣式結束 -->
+        <!-- 以下是新增的 CSS 樣式 -->
+		<style>
+			/* 美化麵包屑導航 */
+			.breadcrumb {
+				padding: 10px 0;
+				background-color: transparent;
+				border-radius: 0;
+				margin-bottom: 25px;
+				list-style: none;
+				line-height: 1.5;
+			}
+	
+			.breadcrumb > li {
+				display: inline-block;
+				margin-right: 6px;
+			}
+	
+			.breadcrumb > li + li:before {
+				content: "›";
+				padding: 0 8px;
+				color: #adb5bd;
+				font-size: 1.3em; /* 维持分隔符大小 */
+				vertical-align: middle;
+			}
+	
+			.breadcrumb > li > a {
+				display: inline-block;
+				padding: 8px 16px;
+				background-color: #f0f2f5;
+				color: #337ab7;
+				text-decoration: none;
+				border-radius: 20px;
+				font-size: 0.9em; /* 保持麵包屑連結字體大小 */
+				font-weight: 500;
+				transition: all 0.25s ease-in-out;
+				border: 1px solid #d8dde3;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+			}
+	
+			.breadcrumb > li > a:hover {
+				background-color: #007bff;
+				color: #ffffff;
+				border-color: #0069d9;
+				transform: translateY(-2px);
+				box-shadow: 0 5px 10px rgba(0, 123, 255, 0.2);
+			}
+	
+			.breadcrumb > .active > a,
+			.breadcrumb > .active > a:hover,
+			.breadcrumb > .active > a:focus {
+				background-color: #007bff;
+				color: #ffffff;
+				border-color: #0069d9;
+				font-weight: bold;
+				cursor: default;
+				transform: none;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+			}
+	
+			/* 針對教授資訊區塊的字體和樣式調整 */
+			.module-um .meditor {
+				line-height: 1.7; /* 調整行高 */
+				font-size: 0.95rem; /* 基礎字體大小，可根據需要微調，使其接近第一個檔案 */
+			}
+	
+			/* 覆蓋內聯的 <big> 和特定 font-size */
+			.module-um .meditor big,
+			.module-um .meditor [style*="font-size:1.125em"],
+			.module-um .meditor [style*="font-size: 1.125em"] /* 考慮空格情況 */
+			 {
+				font-size: inherit !important; /* 强制继承父元素的字体大小 */
+			}
+	
+			/* 如果需要，可以為特定標題設定一個稍大的相對大小 */
+			.module-um .meditor h3, /* 例如，如果原本的 <big> 是標題用途 */
+			.module-um .meditor p > span[style*="font-size:1.125em"] > big /* 更精確地定位原來的標題 */
+			 {
+				font-size: 1.1em; /* 相對於 .meditor 的 font-size，可以微調 */
+				font-weight: bold;
+				color: #333;
+				margin-top: 1.2em;
+				margin-bottom: 0.6em;
+			}
+			/* 確保圖片下方的英文名字體大小正常 */
+			.plan_table_small td > p > span > span > big {
+				 font-size: 1em !important; /* 或者 specific value like 0.95rem */
+			}
+	
+	
+			.module-um .meditor table {
+				color: inherit;
+				font-family: inherit;
+				font-size: inherit;
+				background-color: transparent !important;
+			}
+			.module-um .meditor ul li div {
+				padding: 8px 12px;
+				margin-bottom: 8px;
+				background-color: #f9f9f9;
+				border: 1px solid #e9ecef;
+				border-radius: 4px;
+			}
+			.module-um .meditor hr {
+				margin-top: 20px;
+				margin-bottom: 20px;
+				border-top: 1px solid #004b97;
+			}
+	
+			.plan_table_small td {
+				background-color: transparent !important;
+				padding: 5px 8px; /* 給表格單元格一些內邊距 */
+			}
+			.plan_table_small p {
+				margin: 0.5em 0; /* 調整段落間距 */
+			}
+			.plan_table_small img {
+				border-radius: 4px; /* 給圖片加個小圓角 */
+				box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+			}
+	
+			/* 移除表格標題單元格 class="b6" 的影響 (如果它有不想要的樣式) */
+	
+		</style>
+		<!-- 新增的 CSS 樣式結束 -->
 </head>
 
 <body class="page_mobilecgmolist">
@@ -124,16 +157,6 @@
                                                         <li><a href="https://c109110135.github.io/F453/">雛型系統整合實驗室</a></li>
 													</ol>
                                                 </section>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="Dyn_2_2" class="M4  ">
-                                        <div class="module module-cglist md_style2">
-                                            <div class="minner">
-                                                <header class="mt ">
-                                                    <h2 class="mt-title">謝瑞鴻 教授</h2>
-                                                </header>
-                                                <!-- 原本空的 section mb 已被移除 -->
                                             </div>
                                         </div>
                                     </div>
@@ -182,14 +205,6 @@
                                                                         </td>
                                                                         <td align="left" class="b6" colspan="2" style="vertical-align:top;" valign="bottom">
                                                                             <p><big><span style="font-size:1.125em;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:black"><span style="color:black">數位積體電路與系統設計</span><span style="color:black">,</span><span style="color:black">多媒體</span><span style="color:black">SoC</span><span style="color:black">設計</span><span style="color:black">,</span><span style="color:black">低功率</span><span style="color:black">VLSI</span><span style="color:black">設計</span></span></span></span></big></p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td align="right" style="vertical-align:top; width:12%">
-                                                                            <p><big><span style="font-size:1.125em;"><span style="font-family:Arial,Helvetica,sans-serif;">實驗室網頁：</span></span></big></p>
-                                                                        </td>
-                                                                        <td align="left" class="b6" colspan="2" style="vertical-align:top;" valign="bottom">
-                                                                            <p><a href="https://ccee.nkust.edu.tw/p/412-1054-7499.php?Lang=zh-tw" title="lab"><big><span style="font-size:1.125em;"><span style="font-family:Arial,Helvetica,sans-serif;"></span></span><span style="font-size:1.125em;"><span style="font-family:Arial,Helvetica,sans-serif;">https://ccee.nkust.edu.tw/p/412-1054-7499.php?Lang=zh-tw</span></span></big></a></p>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
