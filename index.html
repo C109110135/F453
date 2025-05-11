@@ -10,6 +10,70 @@
     <link rel="shortcut icon" href="https://ccee.nkust.edu.tw/var/file/54/1054/msys_1054_6264000_48418.png" type="image/x-icon">
     <link rel="icon" href="https://ccee.nkust.edu.tw/var/file/54/1054/msys_1054_6264000_48418.png" type="image/x-icon">
     <link rel="stylesheet" href="./雛型系統整合實驗室_files/combine-zh-tw.css" type="text/css">
+
+    <!-- 以下是新增的 CSS 樣式 -->
+    <style>
+        /* 美化麵包屑導航 */
+        .breadcrumb {
+            padding: 10px 0; /* 調整整體麵包屑容器的上下邊距 */
+            background-color: transparent; /* 移除預設的麵包屑背景 (如果有的話) */
+            border-radius: 0;
+            margin-bottom: 25px;
+            list-style: none; /* 確保沒有列表符號 */
+            line-height: 1.5; /* 確保分隔符和文字垂直居中 */
+        }
+
+        .breadcrumb > li {
+            display: inline-block; /* 讓列表項水平排列 */
+            margin-right: 6px; /* 每個連結元素之間的右邊距 */
+        }
+
+        /* 自訂分隔符樣式 */
+        .breadcrumb > li + li:before {
+            content: "›"; /* 使用右單尖引號作為分隔符 */
+            padding: 0 8px; /* 分隔符的左右內邊距 */
+            color: #adb5bd; /* 分隔符顏色，較柔和的灰色 */
+            font-size: 1.3em; /* 讓分隔符稍微突出一些 */
+            vertical-align: middle; /* 嘗試讓分隔符與文字垂直對齊 */
+        }
+
+        .breadcrumb > li > a {
+            display: inline-block; /* 使得 padding 和其他塊級屬性生效 */
+            padding: 8px 16px; /* 連結的內邊距，使其看起來像按鈕 */
+            background-color: #f0f2f5; /* 連結的背景色 (淺灰色) */
+            color: #337ab7; /* 連結文字顏色 (一種藍色) */
+            text-decoration: none; /* 移除預設的下劃線 */
+            border-radius: 20px; /* 膠囊形狀的圓角 */
+            font-size: 0.9em; /* 連結文字大小 */
+            font-weight: 500; /* 字體粗細 */
+            transition: all 0.25s ease-in-out; /* 平滑的過渡動畫效果 */
+            border: 1px solid #d8dde3; /* 淺色邊框 */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* 細微的陰影增加立體感 */
+        }
+
+        .breadcrumb > li > a:hover {
+            background-color: #007bff; /* 滑鼠懸停時的背景色 (亮藍色) */
+            color: #ffffff; /* 滑鼠懸停時的文字顏色 (白色) */
+            border-color: #0069d9;
+            transform: translateY(-2px); /* 滑鼠懸停時輕微向上移動 */
+            box-shadow: 0 5px 10px rgba(0, 123, 255, 0.2); /* 滑鼠懸停時更明顯的陰影 */
+        }
+
+        /* 當前頁面 (active) 的連結樣式 */
+        .breadcrumb > .active > a,
+        .breadcrumb > .active > a:hover,
+        .breadcrumb > .active > a:focus { /* 確保 active 狀態下 hover 無特殊交互變化 */
+            background-color: #007bff; /* 與 hover 類似，但更明確表示當前 */
+            color: #ffffff;
+            border-color: #0069d9;
+            font-weight: bold; /* 當前頁面文字加粗 */
+            cursor: default; /* 鼠標樣式變為默認，表示不可點擊 */
+            transform: none; /* active 狀態無上移 */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* active 狀態的陰影 */
+        }
+    </style>
+    <!-- 新增的 CSS 樣式結束 -->
+
 </head>
 
 <body>
