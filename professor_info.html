@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Professor Information</title> <!-- Title for this content page -->
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      /* Styles specific to this content page, if any */
+      /* For example, if you want the zoom on this page too, though it might be inherited */
+      /* body { zoom: 1.5; } */
+
+      /* Ensure anchors are targetable and offset for fixed headers if you had one *within* this page */
+      section[id] {
+        scroll-margin-top: 70px; /* Adjust if you have a fixed header in this content page */
+      }
+       body {
+        background-color: #ffffff; /* Or your desired content background */
+        padding: 20px; /* Restore padding for content area */
+      }
+      /* carousel.css is needed here */
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for the carousel (if it's part of this page) -->
+    <link href="carousel.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Carousel -->
+    <div id="myCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#777"/>
+                    <image href="./F453_files/首頁-1.jpg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"/>
+                    <!-- <text x="50%" y="50%" fill="#777" dy=".3em">First slide</text> -->
+                </svg>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#777"/>
+                    <image href="./F453_files/首頁-2.jpg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"/>
+                    <!-- <text x="50%" y="50%" fill="#777" dy=".3em">Second slide</text> -->
+                </svg>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#777"/>
+                    <image href="./F453_files/首頁-3.jpg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"/>
+                    <!-- <text x="50%" y="50%" fill="#777" dy=".3em">Third slide</text> -->
+                </svg>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Content Sections -->
+    <section id="basic" class="p-4">
+        <h2>基本資料</h2>
+        <div class="basic-info" style="margin-bottom:20px;">
+            <table style="width:100%; border-collapse: collapse;">
+                <tr>
+                    <td style="width:25%; vertical-align: top; padding:10px; text-align: center;">
+                        <p style="margin: 0; font-weight:bold;"><h3>謝瑞鴻 教授</h3></p>
+                        <img src="./F453_files/teacher14.jpg" alt="大頭貼" style="width:100%; max-width:250px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.15);">
+                        <p style="margin: 0;"><h3>Jui-Hung Hsieh</h3></p>
+                    </td>
+                    <td style="vertical-align: top; padding:10px;">
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p><h3><strong>最高學歷：</strong>國立交通大學電子工程博士</h3></p>
+                        <p><h3><strong>TEL：</strong>(07)6011000 Ext:32016 研究室：F414</h3></p>
+                        <p><h3><strong>E-mail：</strong>jhhsieh@nkust.edu.tw</h3></p>
+                        <p><h3><strong>專長：</strong>數位積體電路與系統設計、多媒體 SoC 設計、低功率 VLSI 設計</h3></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    <hr>
+    <h2>經歷</h2>
+    <ul>
+        <li style="list-style-position:inside">
+            <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">美國約翰霍普金斯大學 訪問教授</span></div>
+        </li>
+        <li style="list-style-position:inside">
+            <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">聯發科技 高效能處理器研發部 技術副理</span></div>
+        </li>
+        <li style="list-style-position:inside">
+            <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">京宏科技 IC設計處 經理</span></div>
+        </li>
+        <li style="list-style-position:inside">
+            <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">旺宏電子 產品設計部 Group Leader</span></div>
+        </li>
+    </ul>
+    </section>
+
+    <hr>
+
+    <section id="research" class="p-4">
+        <h2>研究計畫</h2>
+        <ul>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">適用於行動應用處理器系統晶片之即時智慧型低功率多視角三維高效率視訊編碼設計與研究, 109.08.01~112.07.31, 科技部，主持人</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">智慧型動態電壓頻率調整與傳輸頻寬感知低功率高效率視訊編碼設計與研究, 107.08.01~109.07.31, 科技部，主持人</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">智慧型動態電壓頻率調整感知低功率高效能視訊編碼設計與研究 (II), 106.08.01~107.07.31, 科技部，主持人</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">即時穿戴式ECG應用之前瞻低功率高效能階級樹集合分割設計與研究, 106.08.01~107.07.31, 科技部，主持人</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">智慧型動態電壓頻率調整感知低功率高效能視訊編碼設計與研究, 105.08.01~106.07.31, 科技部，主持人</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">具品質保證機制之可穿戴型小波轉換式心電圖資料壓縮演算法之開發, 105.08.01~106.07.31, 科技部，共同主持人</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">動態電壓頻率調整感知低功率視訊編碼設計與研究(I), 104.08.01~105.07.31, 科技部，主持人</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">104-智慧電子前瞻技術精進課程及模組推廣計畫—高效能視訊系統晶片設計, 104.09.01~105.08.31, 教育部，共同主持人</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">應用於即時行動視訊之動態電壓頻率調整感知資料頻寬最佳化移動估測設計與研究, 103.11.01~104.10.31, 科技部，主持人</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">103-智慧電子前瞻技術精進課程及模組推廣計畫—高效能視訊系統晶片設計, 103.09.01~104.08.31, 教育部，共同主持人</span></div>
+            </li>
+        </ul>
+    </section>
+    <hr>
+    <section id="journal" class="p-4">
+        <h2>期刊論文</h2>
+        <ul>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">J. H. Hsieh, J. C. Syu, Z. Y. Guo, and Z. Y. Zhang, “A real-time low-power coding bit-rate control scheme for high-efficiency video coding in a multiprocessor system-on-chip," IEEE Systems Journal, 2021. (Early Access)</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">J. H. Hsieh, K. C. Hung, J. H. Liu, and T. C. Wu, “Wavelet-based quality-constrained ECG data compression system without decoding process,” IEEE MultiMedia, Vol. 27, No. 2, pp.33-45, 2020.</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">J. H. Hsieh, J. A. Cai, Y. N. Wang, and Z. Y. Guo, “ML-assisted DVFS-aware HEVC motion estimation design scheme for mobile APSoC,” IEEE Systems Journal, Vol. 13, No. 4, pp.4464-4473, 2019.</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">J. H. Hsieh, M. J. Shih, and X. H. Huang, “Algorithm and VLSI architecture design of low-power SPIHT decoder for mHealth applications,” IEEE Transactions on Biomedical Circuits and Systems, Vol. 12 No. 6, pp.1450-1457, 2018.</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">J. H. Hsieh, K. C. Hung, Y. L. Lin, and M. J. Shih, “A Speed- and power-efficient SPIHT design for wearable quality-on-demand ECG applications,” IEEE Journal of Biomedical and Health Informatics, Vol. 22 No. 5, pp.1456-1465, 2018.</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">J. H. Hsieh and H. R. Wang,“無, ” IEEE Transactions on Very Large Scale Integration (VLSI) Systems, Vol. 26 No. 2, 2018, pp.262~271.</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">J. H. Hsieh, R. C. Lee, K. C. Hung, and M. J. Shih,” Integration, the VLSI Journal (Elsevier), Vol. 60, 2018, pp.248~256.</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">J. H. Hsieh, J. H. Huang, and H. R. Wang,” Integration, the VLSI Journal (Elsevier), Vol. 57 No. 3, 2017, pp.74~80.</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">J. H. Hsieh and T. S. Chang, “Algorithm and architecture design of bandwidth-oriented motion estimation for real-time mobile video applications,”  IEEE Transactions on Very Large Scale Integration (VLSI) Systems, vol. 21, no. 1, 2013, pp. 33-42.</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">J. H. Hsieh, W. C. Tai, and T. S. Chang, “Memory bandwidth scalable motion estimation for mobile video coding,” EURASIP Journal on Advances in Signal Process., 2011 2011:126..</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">Y. L. Lin, Y. K. Liu, N. M. Tsai, J. H. Hsieh, C. H. Chen, C.M. Lin and K. W. Liao, “A Lipo-PEG-PEI Complex for Encapsulating Curcumin that Enhances its Antitumor Effects on Curcumin-sensitive and Curcumin-resistance Cells,” Nanomedicine: Nanotechnology, Biology and Medicine, vol. 8, no. 3, 2012, pp. 318-327.</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">Y. L. Lin, Y. S. Chen, J. H. Hsieh, C. M. Lin, H. Y. Wu, C. S. Lin, R. M. Chu, K. W. Liao, and Y. H. Hsu, "Utilization of IkB-EGFP chimeric gene as indicator to identify microbial metabolites with NF-kB inhibitor activity", Biological Procedures Online, vol. 12, 2010, pp. 131-138. </span></div>
+            </li>
+        </ul>
+    </section>
+    <hr>
+    <section id="conference" class="p-4">
+        <h2>研討會論文</h2>
+        <ul>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">J. H. Hsieh, J. C. Syu, and Z. Y. Zhang, “Coding efficient motion estimation rate control for H.265/HEVC,” IEEE Global Conference on Consumer Electronics, Japan, 2020.</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">J. H. Hsieh, H. L. Zhang, and C. H. Lin, “An intelligent fall detection design for mobile health-care applications,” IEEE International Conference on Consumer Electronics-Taiwan, Taiwan, 2020.</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">J. H. Hsieh, Z. Y. Guo, J. A. Cai, J. C. Syu, and H. L. Zhang, “A low-hardware-complexity rate control scheme for high efficiency video coding,” IEEE Global Conference on Consumer Electronics, Japan, 2019.</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">J. H. Hsieh, J. C. Syu, and H. L. Zhang, “Machine learning-based rate control scheme for high efficiency video coding,” IEEE International Symposium on Intelligent Signal Processing and Communication Systems, Taiwan, 2019.</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">J. H. Hsieh and Z. Y. Guo, “A hardware-oriented HEVC rate-control scheme for mobile video coding,” Global Engineering and Applied Science Conference, Japan, 2018.</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">J. H. Hsieh, M. J. Shih, and K. C. Hung，"A Low-hardware-complexity SPIHT Design for ECG applications,” Annual Conference, Japan, 2017.</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">J. H. Hsieh, K. C. Hung, and H. R. Wang，"A Bandwidth-Adjustable Motion Estimation Design,” International Conference on Intelligent Systems and Image Processing, Japan, 2016.</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">J. H. Hsieh, K. C. Hung, and H. C. Li, “A hardware-efficient BCH encoder design,” IEEE International Conference on Consumer Electronics-Taiwan, Taiwan, 2016.</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">J. H. Hsieh, K. C. Hung, and Y. W. Hsu, “Memory-efficient motion estimation design for mobile multimedia applications,” IEEE International Conference on Consumer Electronics-Berlin, Germany, 2015.</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">S. Y. Ho, Y. L. Lin, C. M. Lin, J. H. Hsieh, and K. W. Liao， “Inhibition of B16F10 tumor progression by adsorb RBDV-Ig Fc protein and RBDV-Ig Fc genes with Lipo-PEG-PEI complex,” Annual Paris Melanoma Conference, Paris, France, 2014.</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">C. M. Lin,Y.-L. Lin, S. Y. Ho, J. H. Hsieh, and  K. W. Liao， “7,7”-Dimethoxyagastisflavone inhibits metastasis of B16F10 melanoma,” Annual Paris Melanoma Conference, Paris, France, 2014.</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">J. H. Hsieh and T. S. Chang, “Bandwidth-constrained motion estimation for real-time mobile video application,” IEEE International Conference on Digital Signal Processing, Corfu, Greece, 2011. </span></div>
+            </li>
+        </ul>
+    </section>
+    <hr>
+    <section id="patent" class="p-4">
+        <h2>專利</h2>
+        <ul>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">"Wearable Electrocardiogram Measurement Device and Method for Compressing an Electrocardiogram", US9603571 B2, 2017</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">"一種快速BCH碼解碼方法", 中華民國發明專利, I527383, 2016</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">"適用於視訊處理之頻寬導向移動估測方法", 中華民國發明專利, I517680, 2016</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">"穿戴式心電圖量測器暨心電圖之壓縮方法", 中華民國發明專利, I608824, 2017</span></div>
+            </li>
+        </ul>
+    </section>
+    <hr>
+    <section id="service" class="p-4">
+        <h2>學術服務</h2>
+        <ul>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">Reviewer of IEEE Journal of Biomedical and Health Informatics</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">Reviewer of IEEE International Conference on Artificial Intelligence Circuits and Systems </span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">Reviewer of IEEE Journal on Emerging and Selected Topics in Circuits and Systems </span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">Reviewer of IEEE Transactions on Biomedical Circuits and Systems</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">Reviewer of IEEE Transactions on Very Large Scale Integration Systems</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">Reviewer of IEEE Transactions on Circuits and Systems for Video Technology</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">Reviewer of IEEE International Symposium on Circuits and Systems</span></div>
+            </li>
+            <li style="list-style-position:inside">
+                <div style="border:1px solid #cccccc;padding:5px 10px;"><span style="font-size:1.125em;">Reviewer of IEEE Biomedical Circuits and Systems Conference</span></div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="container mt-5 py-3">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>Copyright © F453 · Professor Details</p>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>智慧系統晶片設計實驗室</title>
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      /* Basic Reset and Body Setup */
+      html {
+        font-size: 20px; /* Or 20px, or whatever base size you prefer. Default is often 16px. */
+                        /* This will be scaled by the body's zoom: 1.5; */
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden; /* Prevent horizontal scrollbar if zoom causes slight overflow */
+      }
+      body {
+        background-color: #f0f0f0; /* Background for the entire page */
+        overflow-y: hidden; /* Prevent scrollbars on the main body, iframe will handle its scroll */
+      }
+
+      /* Sidebar Styles */
+      .sidebar {
+        width: 20vw; /* Use viewport width for the sidebar */
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh; /* Full viewport height */
+        overflow-y: auto; /* Allow sidebar to scroll if content is long */
+        z-index: 1020; /* Ensure sidebar is on top */
+        background-color: #ffffff; /* Sidebar background */
+        padding: 20px; /* Internal padding for sidebar content */
+        box-sizing: border-box; /* Padding included in width calculation */
+      }
+
+      /* Main Content Area Styles */
+      .main-content-wrapper { /* This is the div that will be pushed by the sidebar */
+        margin-left: 20vw; /* Offset by the sidebar's viewport width */
+        width: calc(100vw - 20vw); /* Take up the remaining viewport width */
+        height: 100vh; /* Take full viewport height */
+        padding-top: 20px; /* Top padding for the content area, matching sidebar's internal top space */
+        padding-left: 15px; /* Optional: if you want some space on the left of the iframe */
+        padding-right: 15px; /* Optional: if you want some space on the right of the iframe */
+        padding-bottom: 20px; /* Optional: bottom padding */
+        box-sizing: border-box; /* All padding included in width/height */
+        overflow-y: hidden; /* This wrapper won't scroll; iframe will */
+      }
+
+      #contentFrame {
+        width: 100%;
+        height: 100%; /* Fill the padded .main-content-wrapper */
+        border: none;
+        display: block; /* Good practice for iframes */
+      }
+
+      /* Bootstrap collapse icons alignment (from sidebars.css, ensure it's compatible) */
+      .btn-toggle {
+        /* ... (styles from sidebars.css or your custom ones) ... */
+      }
+      .btn-toggle-nav a {
+        /* ... (styles from sidebars.css or your custom ones) ... */
+      }
+
+    </style>
+    <!-- If sidebars.css contains more than just collapse icon styling, link it -->
+    <link href="sidebars.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar: Fixed position, outside of the main content flow modification -->
+    <aside id="sidebarCollapse" class="sidebar collapse show">
+        <div class="d-flex flex-column" style="height: 100%;"> <!-- Ensure content uses full height for scrolling -->
+            <a href="#" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom"
+               onclick="loadContent('professor_info.html#'); return false;">
+              <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+              <span class="fs-5 fw-semibold">智慧系統晶片設計實驗室</span>
+            </a>
+            <ul class="list-unstyled ps-0 flex-grow-1"> <!-- flex-grow-1 if you want this list to take available space -->
+              <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                  謝瑞鴻 教授
+                </button>
+                <div class="collapse show" id="home-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="professor_info.html#basic" class="link-dark rounded content-link">基本資料</a></li>
+                    <li><a href="professor_info.html#research" class="link-dark rounded content-link">研究計畫</a></li>
+                    <li><a href="professor_info.html#journal" class="link-dark rounded content-link">期刊論文</a></li>
+                    <li><a href="professor_info.html#conference" class="link-dark rounded content-link">研討會論文</a></li>
+                    <li><a href="professor_info.html#patent" class="link-dark rounded content-link">專利</a></li>
+                    <li><a href="professor_info.html#service" class="link-dark rounded content-link">學術服務</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                  智慧系統晶片設計實驗室
+                </button>
+                <div class="collapse" id="dashboard-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="lab_info.html#lab-basic" class="link-dark rounded content-link">基本資料</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="border-top my-3"></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Main Content Area Wrapper: This div is pushed to the right of the sidebar -->
+    <div class="main-content-wrapper">
+        <iframe id="contentFrame" src="professor_info.html#basic">
+            <p>Your browser does not support iframes.</p>
+        </iframe>
+    </div>
+
+    <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const contentFrame = document.getElementById('contentFrame');
+      const sidebarLinks = document.querySelectorAll('.content-link');
+
+      function loadContent(url) {
+        if (contentFrame) {
+          // Check if the URL already contains a hash
+          if (url.includes('#')) {
+            // If it does, and it's the same base URL as current, force reload for hash change
+            const [baseUrl, hash] = url.split('#');
+            const [currentBaseUrl] = contentFrame.src.split('#');
+            if (baseUrl === currentBaseUrl && contentFrame.contentWindow.location.hash !== '#' + hash) {
+                 // contentFrame.contentWindow.location.hash = hash; // this might not always re-trigger scroll
+                 contentFrame.src = url; // Reload if hash changes on same page
+            } else {
+                 contentFrame.src = url;
+            }
+          } else {
+            contentFrame.src = url;
+          }
+        }
+      }
+
+      sidebarLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+          event.preventDefault();
+          const targetUrl = this.getAttribute('href');
+          loadContent(targetUrl);
+        });
+      });
+    </script>
+</body>
+</html>
